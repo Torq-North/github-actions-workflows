@@ -37,6 +37,8 @@ jobs:
             echo "environment=development" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/staging" ]; then
             echo "environment=staging" >> $GITHUB_OUTPUT
+          elif [ "${{ github.ref }}" == "refs/heads/uat" ]; then
+            echo "environment=UAT" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/main" ]; then
             echo "environment=production" >> $GITHUB_OUTPUT
           fi
