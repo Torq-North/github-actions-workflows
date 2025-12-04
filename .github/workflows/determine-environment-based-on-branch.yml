@@ -41,6 +41,10 @@ jobs:
             echo "environment=UAT" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" == "refs/heads/main" ]; then
             echo "environment=production" >> $GITHUB_OUTPUT
+          elif [ "${{ github.ref }}" == "refs/heads/prod" ]; then
+            echo "environment=production" >> $GITHUB_OUTPUT
+          elif [ "${{ github.ref }}" == "refs/heads/production" ]; then
+            echo "environment=production" >> $GITHUB_OUTPUT
           fi
     outputs:
       environment: ${{ steps.branch-check.outputs.environment }}
