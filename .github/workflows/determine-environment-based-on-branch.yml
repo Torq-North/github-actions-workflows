@@ -6,8 +6,8 @@
 # You can call this workflow and use the output as follows:
 # jobs:
 #   determine-environment:
-#     uses: TorqIT/github-actions-workflows/.github/workflows/determine-environment-based-on-branch.yml@sha
-# 
+#     uses: Torq-North/github-actions-workflows/.github/workflows/determine-environment-based-on-branch.yml@sha
+#
 #   another-job:
 #     needs: [determine-environment]
 #     environment: ${{ needs.determine-environment.outputs.environment }}
@@ -22,7 +22,7 @@ on:
         required: false
         type: string
     outputs:
-      environment: 
+      environment:
         value: ${{ jobs.determine-environment.outputs.environment }}
 
 jobs:
